@@ -21,3 +21,7 @@ It will ask if you would like to load or save game data. To save game data, type
 It will then insert the game data by id into Mongo DB (or if you don't have an id, it will auto generate one for you). After saving, there will be a confirmation showing that it was successful.
 
 To load a saved state, you need the game id, which you input into the client after requesting that you want to load data. The client will take the game_id and search the database for the previously saved information and display it back to you as a JSON string if it successfully found the information.
+If I request _id '1234', I will receive back this JSON string:
+```
+"{'_id': 1234, 'saveSlot': 1, 'petName': 'Barry', 'health': 10, 'hunger': 10, 'thirst': 10, 'hygiene': 10}"
+```
